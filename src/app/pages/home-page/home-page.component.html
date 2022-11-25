@@ -1,0 +1,10 @@
+<app-info-message></app-info-message>
+<app-post-list [posts]="(posts$ | async)!"
+               [page]="page"
+               [lastPage]="lastPage$ | async"
+               [loggedInUserId]="loggedInUserId$ | async"
+               (previousPage)=selectPreviousPage();
+               (nextPage)="selectNextPage();"
+>
+
+</app-post-list>

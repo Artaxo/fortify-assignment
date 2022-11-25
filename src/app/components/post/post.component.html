@@ -1,0 +1,23 @@
+<div class="list-group-item mb-3" aria-current="true">
+  <div class="row">
+    <div class="col-lg-2 d-flex flex-column justify-content-center">
+      <h5>{{post?.userName}}</h5>
+      <br>
+      <a [href]="post?.userWebsite | https" target="_blank">{{post?.company}}</a>
+    </div>
+    <div class="col-lg-1 d-flex flex-column justify-content-center">
+      <div class="vr h-75"></div>
+    </div>
+    <div class="col-lg-9 d-flex flex-column align-items-start justify-content-center">
+      <h5>
+        <a *ngIf="postEditable; else notEditable" [routerLink]="'/'+routePathsEnum.POST+'/'+post?.id"
+           href="#">{{post?.title}}</a>
+        <ng-template #notEditable>
+          {{post?.title}}
+        </ng-template>
+      </h5>
+      <br>
+      <p>{{post?.body}}</p>
+    </div>
+  </div>
+</div>

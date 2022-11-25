@@ -1,0 +1,20 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  height: 200px;
+}
+
+.login-card {
+  width: 18rem;
+}
+
+.login-header {
+  font-size: 1.2rem;
+}
+
+.login-error {
+  color: red;
+}
